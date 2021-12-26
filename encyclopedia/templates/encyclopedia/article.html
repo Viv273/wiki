@@ -1,0 +1,13 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{title}}
+{% endblock %}
+
+{% block body %}
+    <!--має виводити в body вміст статті-->
+{{content|safe}}
+
+<a href="{% url 'changepage' title %}">Change Page</a>
+
+{% endblock %}
